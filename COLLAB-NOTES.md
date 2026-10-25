@@ -121,9 +121,9 @@ your call against D-078: an "update when no rooms are active" option (wait for e
 install anyway), or a release flag that marks a consensus change as "install now".
 
 **Ashvale filming.** SadFrog's side now makes Ashvale promo videos automatically from a local copy of
-`dist/ashvale3d.html` (never a live arcade). Today that means patching the game from outside, so we have built a
-small film API in ASHVALE. It is a local commit, not pushed; it comes as its own ASHVALE PR when SadFrog says so. It
-adds `ASH.film.camera({eye, look, fov})` / `release` / `hud` / `hour`, `?nohud`, `?hour=` (local hour),
+`dist/ashvale3d.html` (never a live arcade). So that it no longer patches the game from outside, a small film API is
+now in ASHVALE `main` (39c0c28, pushed 2026-10-25); players get it in your next inscribed
+release. It adds `ASH.film.camera({eye, look, fov})` / `release` / `hud` / `hour`, `?nohud`, `?hour=` (local hour),
 `ASH.enter(zone, floor)` / `?enter=`, `ASH.zonesReady(ms)`, `ASH.music.play/auto/start/state`, documented `_inject`
 fields (`l` is the floor: we sent `l: 40` and our characters were hidden as "off floor"), and lit dungeons. It also
 fixes three things you may want to know about now:
